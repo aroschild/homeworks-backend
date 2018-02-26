@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unique words</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="margin-top: 30px">
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            
+            <?php if (isset($error)): ?>
+                <p class="alert alert-danger"><?= $error ?></p>
+            <?php endif; ?>
+            
+            <?php if (isset($result)): ?>
+                <p class="alert alert-success"><?= $result ?></p>
+            <?php endif; ?>
+            
+            <form action="10.php" method="post">
+                <div class="form-group">
+                    <label for="text"><b>Input text in the field:</b></label>
+                    <textarea name="text" id="text" class="form-control" rows="1"><?= isset($text) ? $text : '' ?></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
